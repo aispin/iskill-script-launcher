@@ -56,13 +56,16 @@ window.PROMO = {
         meta2: "本地运行",
         meta3: "MIT 许可"
       },
-      terminal: {
-        title: "zsh — iskill-script-launcher",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "./run.command doctor", c: "k" }],
-          [{ t: "  ", c: "p" }, { t: "平台      : darwin（Windows=False）", c: "s" }],
-          [{ t: "  ", c: "p" }, { t: "Python    : 3.13.12", c: "s" }],
-          [{ t: "  ", c: "p" }, { t: "端口 8801 : 空闲", c: "s" }]
+      chat: {
+        title: "AI Agent · 对话现场",
+        status: "在线",
+        userLabel: "你",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "给这个脚本加个跨平台启动器，双击就能跑，逻辑只写一份" },
+          { role: "agent", text: "好 —— 真源用一份纯标准库 Python 写；.command / .ps1 / .cmd 只做「找 Python → 转参数」的薄壳，各十几行。绝不再翻译第二份 PowerShell。", tag: "已读 references/cross-platform.md" },
+          { role: "user", text: "菜单退出时把终端窗口直接关掉，别弹确认框" },
+          { role: "agent", text: "可以。退出返回 10，判定是双击打开的就关窗 —— 关键是先 exit 再后台关窗；要是 exec 一个交互 shell，必弹「终止正在运行的进程」。", tag: "真机验证 didClose=true" }
         ]
       },
 
@@ -194,13 +197,16 @@ window.PROMO = {
         meta2: "Runs locally",
         meta3: "MIT licensed"
       },
-      terminal: {
-        title: "zsh — iskill-script-launcher",
-        lines: [
-          [{ t: "$ ", c: "p" }, { t: "./run.command doctor", c: "k" }],
-          [{ t: "  ", c: "p" }, { t: "platform  : darwin (Windows=False)", c: "s" }],
-          [{ t: "  ", c: "p" }, { t: "python    : 3.13.12", c: "s" }],
-          [{ t: "  ", c: "p" }, { t: "port 8801 : free", c: "s" }]
+      chat: {
+        title: "AI Agent · Live chat",
+        status: "online",
+        userLabel: "You",
+        agentLabel: "AI",
+        messages: [
+          { role: "user", text: "Add a cross-platform launcher to this script — double-click to run, logic written once" },
+          { role: "agent", text: "Sure — one stdlib-only Python source; .command / .ps1 / .cmd stay as ten-line thin shells that just find Python and forward args. Never translate bash into a second PowerShell.", tag: "read references/cross-platform.md" },
+          { role: "user", text: "Close the terminal window on menu quit — no confirm dialog" },
+          { role: "agent", text: "Done. Quit returns 10; if the window was opened by double-click we close it — exit first, then close in the background. Exec-ing an interactive shell always pops the confirm dialog.", tag: "verified on real machine, didClose=true" }
         ]
       },
 
