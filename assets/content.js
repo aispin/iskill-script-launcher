@@ -139,13 +139,14 @@ window.PROMO = {
       steps: {
         eyebrow: "上手",
         title: "三步跑起来",
-        sub: "",
+        sub: "架构、骨架、窗口收尾都由它按 references 做；你只双击验收。",
         items: [
           { title: "交给 AI 装", desc: "把这句话粘进对话框，agent 会自己拉代码、读文档，再告诉你用法。", codeKey: "install" },
-          { title: "抄骨架", desc: "把 templates/ 里的四件套复制到你的技能目录，改各处 ⚠️ 标记（技能名、端口、进程名前缀、菜单项）。", codeName: "bash", code: "cp -R templates/ ./my-scripts/\nchmod +x run.command" },
-          { title: "双击就跑", desc: "macOS 双击 .command，Windows 双击 .cmd（不是 .ps1 —— 双击 .ps1 会打开记事本）。无参数进交互菜单，带参数直接执行动作。", codeName: "bash", code: "./run.command          # 交互菜单\n./run.command doctor   # 环境体检\n./run.command start    # 启动" }
+          { title: "说清要哪些入口", desc: "它按 references 定架构、抄骨架、处理窗口收尾；你不用自己写两套逻辑。", codeName: "prompt", code: "给这个 Python 服务写个跨平台启动脚本：macOS 双击 .command、Windows 双击 .cmd，带启停菜单，退出直接关窗。" },
+          { title: "双击验收三个入口", desc: "macOS 双击 .command、Windows 双击 .cmd（不是 .ps1 —— 双击会开记事本）；无参数进菜单、带参数直接跑，选 0 应该静默关窗。" }
         ]
       },
+
 
       faq: {
         eyebrow: "问答",
@@ -279,14 +280,15 @@ window.PROMO = {
 
       steps: {
         eyebrow: "Get started",
-        title: "Three steps",
-        sub: "",
+        title: "Up and running in three steps",
+        sub: "Architecture, skeleton and window teardown come from its references — you just double-click and check.",
         items: [
-          { title: "Let AI install it", desc: "Paste this into your agent — it pulls the repo, reads the docs, and tells you how to use it.", codeKey: "install" },
-          { title: "Copy the skeleton", desc: "Copy templates/ into your skill directory and edit every ⚠️ marker (skill name, port, process-name prefix, menu entries).", codeName: "bash", code: "cp -R templates/ ./my-scripts/\nchmod +x run.command" },
-          { title: "Double-click and go", desc: "On macOS double-click .command; on Windows double-click .cmd (not .ps1 — that opens Notepad). No args opens the interactive menu; args run the action directly.", codeName: "bash", code: "./run.command          # interactive menu\n./run.command doctor   # environment check\n./run.command start    # start" }
+          { title: "Let your agent install it", desc: "Paste the line into the chat — it clones the repo, reads the docs, and tells you how to use it.", codeKey: "install" },
+          { title: "Say which entry points you need", desc: "It picks the architecture from its references and handles the window teardown. You never write the logic twice.", codeName: "prompt", code: "Write a cross-platform launcher for this Python service: .command on macOS, .cmd on Windows, with a start/stop menu, and quit should just close the window." },
+          { title: "Double-click all three entries", desc: "macOS: .command. Windows: .cmd — not .ps1, double-clicking that opens Notepad. No args opens the menu, args run an action, and 0 should close the window silently." }
         ]
       },
+
 
       faq: {
         eyebrow: "FAQ",
