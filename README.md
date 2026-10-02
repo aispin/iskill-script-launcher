@@ -1,5 +1,7 @@
 # iskill-script-launcher
 
+> 落地页：<https://aispin.github.io/iskill-script-launcher/> · 仓库：<https://github.com/aispin/iskill-script-launcher>
+
 把「给用户双击运行的跨平台脚本」这件事的方法论与可抄骨架固化下来：
 **一份 Python 实现 + 各平台薄壳**，macOS 双击 `.command`、Windows 双击 `.cmd`、Linux 敲 `.sh`。
 
