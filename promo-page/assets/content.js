@@ -42,7 +42,7 @@ window.PROMO = {
       },
       a11y: { skip: "跳到主要内容" },
       ui: { copy: "复制", copied: "已复制", failed: "复制失败" },
-      nav: { features: "能力", how: "上手", faq: "问答" },
+      nav: { features: "能力", shots: "截图", how: "上手", faq: "问答" },
 
       hero: {
         badge: "AI 技能",
@@ -183,7 +183,7 @@ window.PROMO = {
       },
       a11y: { skip: "Skip to main content" },
       ui: { copy: "Copy", copied: "Copied", failed: "Copy failed" },
-      nav: { features: "Features", how: "Get started", faq: "FAQ" },
+      nav: { features: "Features", shots: "Screens", how: "Get started", faq: "FAQ" },
 
       hero: {
         badge: "AI Skill",
